@@ -1,0 +1,16 @@
+_schema-version: "2.1"
+ID: diff-hana-instance-cc-source
+version: 0.0.1
+modules:
+- name: diff-instance-cc-source-db-deployer
+  type: hdb
+  path: db
+  requires:
+  - name: diff-instance-cc-source-db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+resources:
+- name: diff-instance-cc-source-db
+  type: com.sap.xs.hdi-container
+  properties:
+    hdi-container-name: ${service-name}

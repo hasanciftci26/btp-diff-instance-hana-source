@@ -1,0 +1,14 @@
+{
+    "role": {
+        "name": "external_access",
+        "object_privileges": [
+            {
+                "name": "PERSONNELS",
+                "type": "TABLE",
+                "privileges": [
+                    "SELECT"
+                ]
+            }
+        ]
+    }
+}
